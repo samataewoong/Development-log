@@ -1,0 +1,235 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+.header nav a {
+    margin-right: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+.mainBody {
+    flex: 1;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border: 1px solid black;
+}
+
+.footer {
+    background-color: #eee;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.contents {
+    max-width: 1600px;
+    width: 90%;
+    margin: 1rem auto;
+    padding: 2rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+.contentsTitle {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.contentsTitle input {
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 835px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.saveButton {
+    width: 60px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contentsBody {
+  width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    max-width: 1390px;
+    /* min-height는 ContentsPage.jsx에서 인라인 스타일로 동적으로 적용 */
+    /* display: flex;       -- Rnd 컴포넌트에는 필요 없음 */
+    /* flex-direction: column; -- Rnd 컴포넌트에는 필요 없음 */
+    /* gap: 20px;            -- Rnd 컴포넌트에는 필요 없음 */
+    position: relative; /* <-- Rnd 컴포넌트의 position: absolute 기준이 되므로 필수! */
+}
+
+.toolButtons {
+    padding: 6px 12px;
+    font-weight: bold;
+    /*border-bottom: 1px solid #ccc; */
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.text-box {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    resize: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    outline: none;
+    font-size: 16px;
+    background-color: white;
+    box-sizing: border-box;
+    cursor: text;
+    outline: none;
+}
+
+.text-box:focus {
+    outline: none;
+
+}
+
+.toolbar {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    background: #f5f5f5;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.toolbar button {
+    margin-right: 5px;
+    padding: 5px 8px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+}
+
+.toolbar button:hover {
+    background: #ddd;
+}
+
+.log-list-wrapper {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.log-item {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 16px;
+    cursor: pointer;
+    background-color: #fafafa;
+    transition: background-color 0.2s;
+}
+
+.log-item:hover {
+    background-color: #f0f0f0;
+}
+
+.log-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.log-date {
+    margin-top: 6px;
+    color: #888;
+    font-size: 14px;
+}
+
+.postViewBody {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+
+    background-color: #fff;
+    position: relative;
+
+    width: 100%;
+    max-width: 1520px;
+    min-height: 80vh;
+
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.postViewContetns {
+    max-width: 1600px;
+    width: 90%;
+    margin: 1rem auto;
+    padding: 2rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+    min-height: calc(80vh + 4rem);
+}
+
+/* Tiptap 에디터 내부 스타일 */
+.ProseMirror {
+  outline: none; /* 에디터 포커스 시 기본 아웃라인 제거 */
+  min-height: 1em; /* 최소 높이 설정 */
+  /* 여기에 추가적인 Tiptap 관련 스타일을 넣을 수 있습니다. */
+}
+
+/* 툴바 버튼 활성화 시 스타일 */
+.text-editor-toolbar button.is-active {
+  background-color: #ddd;
+}
+
+/* Rnd 내에서 flex-direction을 column으로 변경했으므로 EditorContent가 꽉 차도록 */
+.Rnd .tiptap { /* Rnd 내의 EditorContent에 해당하는 Tiptap 클래스 (확인 필요) */
+    width: 100%;
+    height: 100%; /* flexGrow: 1과 함께 사용될 때 적절히 동작하도록 */
+}
+
+/* 선택 드롭다운, 컬러 피커 등의 기본 스타일 */
+.text-editor-toolbar select, .text-editor-toolbar input[type="color"] {
+    vertical-align: middle;
+}
+
+.tiptap-editor-content .ProseMirror { /* TextBlock.jsx에서 추가한 클래스 활용 */
+  white-space: pre-wrap;
+  word-wrap: break-word; /* 필요에 따라 추가 */
+}
+
+/* Tiptap 에디터의 포커스 시 아웃라인 스타일 */
+.tiptap-editor-content .ProseMirror:focus {
+  outline: none; /* TextBlock에서 outline: 'none'을 지정했지만 혹시 모를 경우를 대비 */
+}
