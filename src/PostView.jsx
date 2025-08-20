@@ -29,7 +29,7 @@ const PostView = () => {
                 setLoading(false);
                 // 오류 발생 시 사용자에게 알림 또는 적절한 에러 페이지로 리다이렉트
                 alert('게시글을 불러오는 데 실패했습니다.');
-                navigate('/'); // 예시: 홈으로 이동
+                navigate('/Development-log/'); // 예시: 홈으로 이동
                 return;
             }
 

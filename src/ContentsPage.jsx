@@ -33,7 +33,7 @@ export default function ContentsPage() {
         if (error) {
           console.error('수정할 게시글 불러오기 실패:', error.message);
           alert('수정할 게시글을 불러오는 데 실패했습니다.');
-          navigate('/');
+          navigate('/Development-log/');
           return;
         }
 

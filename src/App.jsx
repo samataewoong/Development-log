@@ -10,7 +10,7 @@ function App() {
 
 
   return (
-    <Router>
+     <Router basename="/Development-log">
       <div className="mainContainer">
         <Header />
         <Routes>

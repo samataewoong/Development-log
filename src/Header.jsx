@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 function Header() {
   const navigate = useNavigate();
   const goHomeButton = () => {
-    navigate('/');
+    navigate('/Development-log/');
   }
   return (
     <header className="header">
