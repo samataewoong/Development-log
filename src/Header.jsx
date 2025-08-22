@@ -13,9 +13,9 @@ function Header() {
       </h1>
 
       <nav>
-        <a href="/">Home</a>
-        <a href="/">Posts</a>
-        <a href="/contents">write</a>
+        <a href="/Development-log/">Home</a>
+        <a href="/Development-log/">Posts</a>
+        <a href="/Development-log/contents">write</a>
       </nav>
     </header>
   );
